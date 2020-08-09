@@ -10,7 +10,7 @@ This repo contains general information about all the electronics for the Longhor
   - [Pull Requests - Hardware Reviews](#Pull-Requests---Hardware-Reviews)
 - [Hardware Rules](#Hardware-Rules)
   - [Board Version Numbering System](#Board-Version-Numbering-System)
-  - [Board Dependencies: VERSION.md](#Board-Dependencies:-VERSION.md)
+  - [Board Dependencies - VERSION.md](#Board-Dependencies---VERSION.md)
 - [Issues](#Issues)
 - [Useful Contacts](#Useful-Contacts)
 - [FAQs](#FAQs)
