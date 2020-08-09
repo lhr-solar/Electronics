@@ -10,7 +10,7 @@ This repo contains general information about all the electronics for the Longhor
   - [Pull Requests - Hardware Reviews](#Pull-Requests---Hardware-Reviews)
 - [Hardware Rules](#Hardware-Rules)
   - [Board Version Numbering System](#Board-Version-Numbering-System)
-  - [Board Dependencies - VERSION.md](#Board-Dependencies---VERSION.md)
+  - [Board Dependencies - VERSION Markdown](#Board-Dependencies---VERSION-Markdown)
 - [Issues](#Issues)
 - [Useful Contacts](#Useful-Contacts)
 - [FAQs](#FAQs)
@@ -71,7 +71,7 @@ Each board must have a version number on the top silkscreen layer.
 
 Each board must have a version number **vX.Y**: **X** signifies a new design/feature has been added to the board, and **Y** signifies minor fixes such as trace fixes, pin connection fixes, component rearrangement, etc. Each board's version number is independent of any other board. Read the [Board Dependencies: VERSION.md](#board-dependencies:-version.md) section for information if boards are dependent on each other.
 
-### Board Dependencies - VERSION.md
+### Board Dependencies - VERSION Markdown
 Some systems will have boards that depend on other boards e.g. the BPS-LeaderPCB depends on the BPS-MinionPCB, BPS-AmperesPCB, and the BPS-FanPCB. As updates and changes are made to individual boards, newer versions may become incompatible with other older boards. A VERSION.md file should be created and placed inside the PCB repos if board dependencies exist. The [VERSION.md](VERSION.md) in this repo is a template that you can copy. Check other existing repos for more examples.
 
 ## Issues
