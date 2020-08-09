@@ -1,12 +1,27 @@
 # Longhorn Racing Solar Electronics
 This repo contains general information about all the electronics for the Longhorn Racing Solar team. For hardware specific details, go into their respecitve repos. PCB projects are designated by the "PCB" prefixes.
 
+## Table of Contents
+- [Setup](#Setup)
+  - [Cloning PCB Projects](#Cloning-PCB-Projects)
+- [Git Rules](#Git-Rules)
+  - [Creating New Projects](#Creating-New-Projects)
+  - [Making Edits or Additions](#Making-Edits-Or-Additions)
+  - [Pull Requests - Hardware Reviews](#Pull-Requests---Hardware-Reviews)
+- [Hardware Rules](#Hardware-Rules)
+  - [Board Version Numbering System](#Board-Version-Numbering-System)
+  - [Board Dependencies: VERSION.md](#Board-Dependencies:-VERSION.md)
+- [Issues](#Issues)
+- [Useful Contacts](#Useful-Contacts)
+- [FAQs](#FAQs)
+
+
 ## Setup
 All PCBs are created in [KiCad](https://kicad-pcb.org/download/). Make sure to download the most up to date version, and select the correct OS your computer runs.
 
 Make sure you have Git if you do not alread. The command line based Git is most preferred. For the Windows version, download [Git Bash](https://gitforwindows.org/).
 
-#### Checklist
+**Checklist**
 1. [KiCad](https://kicad-pcb.org/download/)
 2. [Git Bash](https://gitforwindows.org/)
 
