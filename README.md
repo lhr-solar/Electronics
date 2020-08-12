@@ -1,5 +1,5 @@
 # Longhorn Racing Solar Electronics
-This repo contains general information about all the electronics for the Longhorn Racing Solar team. For hardware specific details, go into their respecitve repos. PCB projects are designated by the "PCB" prefixes.
+This repo contains general information about all the electronics for the Longhorn Racing Solar team. For hardware specific details, go into their respecitve repos. PCB projects are designated by the "PCB" suffixes.
 
 ## Table of Contents
 - [Setup](#Setup)
@@ -19,7 +19,7 @@ This repo contains general information about all the electronics for the Longhor
 ## Setup
 All PCBs are created in [KiCad](https://kicad-pcb.org/download/). Make sure to download the most up to date version, and select the correct OS your computer runs.
 
-Make sure you have Git if you do not alread. The command line based Git is most preferred. For the Windows version, download [Git Bash](https://gitforwindows.org/).
+Make sure you have Git if you do not already. The command line based Git is most preferred. For the Windows version, download [Git Bash](https://gitforwindows.org/).
 
 **Checklist**
 1. [KiCad](https://kicad-pcb.org/download/)
@@ -28,7 +28,7 @@ Make sure you have Git if you do not alread. The command line based Git is most 
 ### Cloning PCB Projects
 Cloning repos onto your machine is usually straightforwward, but our PCB project repos depend on KiCad library repos. Extra steps must be taken to correctly pull submodules. [Submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules) are repos that are inside a repo.
 
-The most common way to clone repos is to use the HTTPS link, but the most secure way is to clone with SSH. The submodules use SSH, so you must generate and add an SSH key to your GitHub acoount. Follow the instructions in this [tutorial](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh). If this is your first time doing this you can start at the [Generating a new SSH key and adding it to the ssh-agent](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) step, but reading everything is beneficial.
+The most common way to clone repos is to use the HTTPS link, but the most secure way is to clone with SSH. The submodules use SSH, so you must generate and add an SSH key to your GitHub acoount. Follow the instructions in this [tutorial](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh). If this is your first time doing this, you can start at the [Generating a new SSH key and adding it to the ssh-agent](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) step, but reading everything is beneficial.
 
 Once you're able to use Git with SSH, go to the green "Code" button of the repo, and click "Use SSH" to get the url link. Copy the `git@hithub.com:repo-name` link. Then, enter the following command to the terminal but with the correct url link:
 ```
@@ -45,14 +45,14 @@ git submodule update --remote
 These rules apply to all repos. **Commit and push frequently and do NOT work in the master branch!!**
 
 ### Creating New Projects
-Each PCB project has its own repo. The naming convention is __System-FunctionPCB__ which System can be Controls, BPS, etc. and Function is the name/functionality of the board you're making. The PCB prefix must be at the end. Discuss with the leads if you are having trouble with the naming convention.
+Each PCB project has its own repo. The naming convention is __System-FunctionPCB__: System is the system of the car that it relates to, such as Controls, BPS, etc. and Function is the name/functionality of the board you're making. The PCB prefix must be at the end. Discuss with the leads if you are having trouble with the naming convention.
 
 Each PCB project may/will use components which are not available by default in the KiCad standard libraries. Standardized components that are integrated across all systems are in the [UTSVT-KiCadLibraries](https://github.com/lhr-solar/UTSVT-KiCadLibraries) repo. You will need to create a submodule (essentially adding a repo inside a repo) to prevent library dependency issues. Look at existing PCB repos for examples. For more information on adding submodules to your repo, here is some useful [documentation](https://git-scm.com/book/en/v2/Git-Tools-Submodules).
 
-Whenever you create the KiCad project, make sure to add all the symbol and footprint libraries into the Project Specific Libraries. This will prevent library dependency errors whenever another member opens the project that doesn't have any libraries configured.
+Whenever you create a KiCad project, make sure to add all the symbol and footprint libraries into the Project Specific Libraries. This will prevent library dependency errors whenever another member opens the project that doesn't have any libraries configured.
 
 ### Making Edits or Additions
-Before you make an edit or add anything to a repo make sure to be in your own branch. The master branch contains the most stable version of the hardware/software and any edits or additions that are made must be reviewed and approved before the master branch is updated.
+Before you make an edit or add anything to a repo, make sure to be in your own branch. The master branch contains the most stable version of the hardware/software, and any edits or additions that are made must be reviewed and approved before the master branch is updated.
 
 **Commit and push frequently** into your own branches or else there is no point in having version control.
 
