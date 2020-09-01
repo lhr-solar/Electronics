@@ -32,7 +32,7 @@ The most common way to clone repos is to use the HTTPS link, but the most secure
 
 Once you're able to use Git with SSH, go to the green "Code" button of the repo, and click "Use SSH" to get the url link. Copy the `git@hithub.com:repo-name` link. Then, enter the following command to the terminal but with the correct url link:
 ```
-git clone --recursive-submodules git@github.com:repo-name
+git clone --recurse-submodules git@github.com:repo-name
 ```
 
 If you already cloned the repo but don't have the submodules, enter the following commands:
@@ -45,7 +45,7 @@ git submodule update --remote
 These rules apply to all repos. **Commit and push frequently and do NOT work in the master branch!!**
 
 ### Creating New Projects
-Each PCB project has its own repo. The naming convention is __System-FunctionPCB__: System is the system of the car that it relates to, such as Controls, BPS, etc. and Function is the name/functionality of the board you're making. The PCB prefix must be at the end. Discuss with the leads if you are having trouble with the naming convention.
+Each PCB project has its own repo. The naming convention is __System-Function__: System is the system of the car that it relates to, such as Controls, BPS, etc. and Function is the name/functionality of the board you're making. Discuss with the leads if you are having trouble with the naming convention.
 
 Each PCB project may/will use components which are not available by default in the KiCad standard libraries. Standardized components that are integrated across all systems are in the [UTSVT-KiCadLibraries](https://github.com/lhr-solar/UTSVT-KiCadLibraries) repo. You will need to create a submodule (essentially adding a repo inside a repo) to prevent library dependency issues. Look at existing PCB repos for examples. For more information on adding submodules to your repo, here is some useful [documentation](https://git-scm.com/book/en/v2/Git-Tools-Submodules).
 
