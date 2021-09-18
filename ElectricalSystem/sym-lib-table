@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name UTSVT-ElectricalSystem)(type Legacy)(uri ${KIPRJMOD}/UTSVT-ElectricalSystem.lib)(options "")(descr ""))
+)
