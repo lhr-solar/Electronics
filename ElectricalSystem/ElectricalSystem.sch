@@ -65,19 +65,6 @@ F 3 "" H 9250 3100 50  0001 C CNN
 	1    9250 3100
 	-1   0    0    1   
 $EndComp
-$Comp
-L Device:R_Shunt R?
-U 1 1 5F9A0FFC
-P 8500 3350
-F 0 "R?" V 8367 3350 50  0000 C CNN
-F 1 "100u" V 8500 3350 50  0000 C CNN
-F 2 "" V 8430 3350 50  0001 C CNN
-F 3 "~" H 8500 3350 50  0001 C CNN
-	1    8500 3350
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	8300 3350 8050 3350
 Wire Wire Line
 	8400 3500 8400 4000
 Wire Wire Line
@@ -443,7 +430,6 @@ Wire Wire Line
 	12250 3150 12250 3900
 Wire Wire Line
 	12350 3150 12250 3150
-Connection ~ 14300 3350
 Connection ~ 12050 3000
 $Comp
 L UTSVT-ElectricalSystem:Contactor U?
@@ -489,10 +475,6 @@ F3 "HV-" I L 15200 6500 50
 F4 "CAN_H" B L 15200 6750 50 
 F5 "CAN_L" B L 15200 6850 50 
 $EndSheet
-Wire Wire Line
-	14300 3200 14300 3350
-Wire Wire Line
-	15200 3200 14300 3200
 Wire Wire Line
 	14500 3000 15200 3000
 Connection ~ 14500 3000
@@ -650,19 +632,12 @@ Wire Notes Line width 20 style solid rgb(255, 0, 0)
 	13350 5950 13600 5950
 Wire Notes Line width 20 style solid rgb(255, 0, 0)
 	13600 5950 13600 6300
-Connection ~ 12050 6300
 Wire Wire Line
 	12050 5950 12350 5950
 Wire Wire Line
 	12050 6300 12050 5950
 Wire Wire Line
 	12350 6300 12050 6300
-Wire Wire Line
-	11500 6300 12050 6300
-Wire Notes Line width 20 style solid rgb(255, 0, 0)
-	11500 6300 12350 6300
-Wire Notes Line width 20 style solid rgb(255, 0, 0)
-	12050 6300 12050 5950
 Wire Notes Line width 20 style solid rgb(255, 0, 0)
 	12050 5950 12350 5950
 Wire Wire Line
@@ -677,17 +652,9 @@ Wire Wire Line
 Wire Notes Line width 20 style solid rgb(255, 0, 0)
 	12750 6300 15150 6300
 Wire Notes Line width 20 style solid rgb(0, 0, 0)
-	8050 3350 8300 3350
-Wire Notes Line width 20 style solid rgb(0, 0, 0)
-	14300 3350 14300 3200
-Wire Notes Line width 20 style solid rgb(0, 0, 0)
 	14300 3200 15150 3200
 Wire Notes Line width 20 style solid rgb(0, 0, 0)
-	14300 3350 14300 7850
-Wire Notes Line width 20 style solid rgb(0, 0, 0)
 	14300 7850 10400 7850
-Wire Wire Line
-	14300 3350 14300 4700
 Wire Wire Line
 	15200 4700 14300 4700
 Wire Notes Line width 20 style solid rgb(0, 0, 0)
@@ -1043,13 +1010,7 @@ Wire Wire Line
 Wire Wire Line
 	8350 3000 8050 3000
 Wire Wire Line
-	8700 3350 14300 3350
-Wire Notes Line width 20 style solid rgb(0, 0, 0)
-	8700 3350 14300 3350
-Wire Wire Line
 	9050 3000 8650 3000
-Wire Wire Line
-	9450 3000 12050 3000
 Wire Notes Line width 20 style solid rgb(255, 0, 0)
 	12350 3000 9450 3000
 Wire Notes Line width 20 style solid rgb(255, 0, 0)
@@ -1106,9 +1067,112 @@ Text Label 9250 2200 3    50   ~ 0
 BPS_Cont_AUX1
 Wire Wire Line
 	9250 2200 9250 2850
+$Comp
+L UTSVT-ElectricalSystem:Contactor U?
+U 1 1 615CB386
+P 9250 3250
+F 0 "U?" H 9250 3400 50  0001 C CNN
+F 1 "BPS_Contactor" H 9250 3283 50  0001 C CNN
+F 2 "" H 9250 3250 50  0001 C CNN
+F 3 "" H 9250 3250 50  0001 C CNN
+	1    9250 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Shunt R?
+U 1 1 5F9A0FFC
+P 8500 3350
+F 0 "R?" V 8367 3350 50  0000 C CNN
+F 1 "100u" V 8500 3350 50  0000 C CNN
+F 2 "" V 8430 3350 50  0001 C CNN
+F 3 "~" H 8500 3350 50  0001 C CNN
+	1    8500 3350
+	0    1    1    0   
+$EndComp
+Wire Notes Line width 20 style solid rgb(0, 0, 0)
+	14300 3200 14300 7850
+Connection ~ 8950 2850
+Wire Wire Line
+	8950 3500 9050 3500
+Wire Wire Line
+	8950 2850 8950 3500
+Wire Wire Line
+	9550 2850 9550 3500
+Wire Wire Line
+	9550 3500 9450 3500
+Connection ~ 9550 2850
+$Comp
+L UTSVT-ElectricalSystem:Contactor U?
+U 1 1 61629C82
+P 9800 3850
+F 0 "U?" H 9800 4000 50  0001 C CNN
+F 1 "BPS_Contactor" H 9800 3883 50  0001 C CNN
+F 2 "" H 9800 3850 50  0001 C CNN
+F 3 "" H 9800 3850 50  0001 C CNN
+	1    9800 3850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9550 3500 9550 3650
+Connection ~ 9550 3500
+Wire Wire Line
+	8950 3500 8950 4050
+Wire Wire Line
+	8950 4050 9550 4050
+Connection ~ 8950 3500
+Wire Wire Line
+	9700 5100 11850 5100
+Wire Wire Line
+	11850 5100 11850 6300
+Wire Wire Line
+	11850 6300 12050 6300
+Connection ~ 12050 6300
+Wire Notes Line width 20 style solid rgb(0, 0, 0)
+	8050 3350 8300 3350
+Wire Notes Line width 20 style solid rgb(0, 0, 0)
+	8700 3350 9050 3350
+Wire Notes Line width 20 style solid rgb(0, 0, 0)
+	9450 3350 14300 3350
+Wire Wire Line
+	14300 3200 14300 3350
+Connection ~ 14300 3350
+Wire Wire Line
+	14300 3350 14300 4700
+Wire Wire Line
+	14300 3200 15200 3200
+Wire Notes Line width 20 style solid rgb(255, 0, 0)
+	11850 5100 11850 6300
+Wire Notes Line width 20 style solid rgb(255, 0, 0)
+	11850 6300 12050 6300
+Wire Notes Line width 20 style solid rgb(255, 0, 0)
+	12050 6300 12050 5950
+Wire Wire Line
+	9450 3000 9700 3000
+Wire Wire Line
+	9700 3000 9700 3650
+Connection ~ 9700 3000
+Wire Wire Line
+	9700 3000 12050 3000
+Wire Notes Line width 20 style solid rgb(255, 0, 0)
+	9700 3000 9700 3650
+Wire Notes Line width 20 style solid rgb(255, 0, 0)
+	12050 6300 12350 6300
+Wire Wire Line
+	8700 3350 9050 3350
+Wire Wire Line
+	9500 3350 14300 3350
+Wire Wire Line
+	9450 3350 14300 3350
+Wire Wire Line
+	8050 3350 8300 3350
+Wire Notes Line width 20 style solid rgb(255, 0, 0)
+	9700 5100 11850 5100
 Wire Bus Line
 	8700 7850 8700 9800
 Wire Bus Line
 	8550 7650 8550 9800
-Connection ~ 9250 2850
+Wire Notes Line width 20 style solid rgb(255, 0, 0)
+	9700 3950 9700 5100
+Wire Wire Line
+	9700 4050 9700 5100
 $EndSCHEMATC
