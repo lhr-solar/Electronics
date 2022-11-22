@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr B 17000 11000
 encoding utf-8
-Sheet 1 16
+Sheet 1 17
 Title ""
 Date ""
 Rev ""
@@ -100,7 +100,7 @@ L Device:Fuse F?
 U 1 1 5F9A94F3
 P 7500 2350
 F 0 "F?" V 7303 2350 50  0000 C CNN
-F 1 "150A" V 7394 2350 50  0000 C CNN
+F 1 "60A" V 7394 2350 50  0000 C CNN
 F 2 "" V 7430 2350 50  0001 C CNN
 F 3 "~" H 7500 2350 50  0001 C CNN
 	1    7500 2350
@@ -481,8 +481,6 @@ F3 "Array-" O L 15450 2550 50
 $EndSheet
 Wire Wire Line
 	9400 7200 12600 7200
-Wire Notes Line width 20 style solid rgb(255, 0, 0)
-	10500 2350 10500 7000
 Wire Notes Line width 20 style solid rgb(255, 0, 0)
 	10500 7000 9400 7000
 Wire Notes Line width 20 style solid rgb(255, 0, 0)
@@ -931,8 +929,6 @@ F 3 "" H 9600 2450 50  0001 C CNN
 	1    0    0    1   
 $EndComp
 Wire Wire Line
-	8700 4450 10500 4450
-Wire Wire Line
 	10850 4450 10850 5650
 Wire Wire Line
 	10850 5650 11050 5650
@@ -1185,8 +1181,6 @@ Wire Wire Line
 Text Notes 6700 9250 0    50   ~ 0
 Fuses located within\na fuse box
 Wire Wire Line
-	9800 2350 10500 2350
-Wire Wire Line
 	9900 2200 9800 2200
 Text Label 9900 1550 3    50   ~ 0
 BPS_Contactor-
@@ -1262,7 +1256,7 @@ L Device:Fuse F?
 U 1 1 639A8E4C
 P 9950 7000
 F 0 "F?" V 9753 7000 50  0000 C CNN
-F 1 "Fuse" V 9844 7000 50  0000 C CNN
+F 1 "2A" V 9844 7000 50  0000 C CNN
 F 2 "" V 9880 7000 50  0001 C CNN
 F 3 "~" H 9950 7000 50  0001 C CNN
 	1    9950 7000
@@ -1272,16 +1266,6 @@ Wire Wire Line
 	9400 7000 9800 7000
 Wire Wire Line
 	10100 7000 10500 7000
-Wire Wire Line
-	10500 7000 10500 4450
-Connection ~ 10500 4450
-Wire Wire Line
-	10500 4450 10850 4450
-Wire Wire Line
-	10500 4450 10500 2350
-Connection ~ 10500 2350
-Wire Wire Line
-	10500 2350 11050 2350
 Wire Wire Line
 	8700 4450 8700 2350
 Connection ~ 8700 2350
@@ -1443,8 +1427,23 @@ Wire Wire Line
 	6650 5600 6650 6350
 Wire Wire Line
 	6750 5500 6750 6150
+Wire Wire Line
+	9800 2350 10500 2350
+Wire Notes Line width 20 style solid rgb(255, 0, 0)
+	10500 2350 10500 7000
+Wire Wire Line
+	8700 4450 10850 4450
+Wire Wire Line
+	10500 2350 10500 7000
 Wire Bus Line
 	7700 7200 7700 9150
 Wire Bus Line
 	7550 7000 7550 9150
+Connection ~ 10500 2350
+Wire Wire Line
+	10500 2350 11050 2350
+Text Notes 10550 4400 0    50   ~ 0
+Not a junction
+Text Notes 8700 6750 0    50   ~ 0
+Isolated
 $EndSCHEMATC
